@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <div id="showContainer">
+
+    <h1> <%= pokemonData[pokemonStats].name %> </h1>
+
+    <img src="<%= pokemonData[pokemonStats].img %>" width="50px">
+
+        <ul style="list-style: none;">
+            <li>Type: <%= pokemonData[pokemonStats].type[0] %></li>
+            <li>Stats: 
+                <ul style="list-style: none;">
+                <li>HP: <%= pokemonData[pokemonStats].stats.hp %></li>
+                <li>Attack: <%= pokemonData[pokemonStats].stats.attack %></li>
+                <li>Defense: <%= pokemonData[pokemonStats].stats.defense %></li>
+                <li>Speed: <%= pokemonData[pokemonStats].stats.speed %></li>
+                </ul>
+            </li>
+            <li>Abilities: <%= pokemonData[pokemonStats].misc.abilities.normal %> </li>
+        </ul>
+    </div>
+</body>
+</html>

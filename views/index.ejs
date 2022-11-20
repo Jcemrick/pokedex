@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <div id="container">
+
+        <% for (let i = 0; i < 6; i++ ){%>
+
+        <h2> <%= pokemonData[i].name %> </h2>
+
+            <a href="/pokedex/<%= i %>"><img src="<%= pokemonData[i].img%> " width="50px"></a>
+        
+        <% } %>
+    </div>
+</body>
+</html>
