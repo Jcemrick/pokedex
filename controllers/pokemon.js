@@ -51,7 +51,7 @@ router.get('/pokedex/edit', (req, res) => {
 //----------------------------------------------
 
 router.post('/pokedex', (req, res) => {
-    pokemonData.unshift(req.body)
+    Pokemon.unshift(req.body)
     res.redirect('/pokedex')
 })
 
@@ -72,10 +72,17 @@ router.get('/pokedex/:id', (req, res) => {
 //----------------------------------------------
 
 router.put('/pokedex/:id', (req, res) => {
-    pokemonData[req.params.id] = req.body
+    Pokemon[req.params.id] = req.body
     res.redirect('/pokedex')
 })
 
+//----------------------------------------------
+// Delete route
+//----------------------------------------------
+router.delete('/pokedex/:id', (req, res) => {
+    Pokemon.splice(req.params.id, 1)
+    res.redirect('/pokedex')
+})
 
 
 module.exports = router
