@@ -3,14 +3,15 @@
     <%- include('./partials/head.ejs') %>
 <body>
     <div id="container">
+        <!-- <% for (let i = 0; i < 6; i++ ){%> opening of js squid -->
+    <h2> <%= pokemonData[i].name %> </h2>
 
-        <% for (let i = 0; i < 6; i++ ){%>
-
-        <h2> <%= pokemonData[i].name %> </h2>
-
-            <a href="/pokedex/<%= i %>"><img src="<%= pokemonData[i].img%> " width="50px"></a>
-        
-        <% } %>
+                <!-- iterating through the pokemon data -->
+        <a href="/pokedex/<%= i %>"><img src="<%= pokemonData[i].img%> " width="50px"></a>  
+        <form>
+            <input type="submit" value="DELETE">
+        </form>
+        <!-- <% } %> closing of js squid -->
     </div>
     <nav>
         <a href="/pokedex/new">
