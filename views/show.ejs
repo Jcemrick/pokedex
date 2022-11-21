@@ -22,6 +22,9 @@
             </li>
             <li>Abilities: <%= pokemonData[pokemonStats].misc.abilities.normal %> </li>
         </ul>
+        <form action="/pokedex/<%= pokemonStats %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE">
+        </form>
     </div>
 </body>
 </html>
