@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head.ejs') %>
+    <title>Pokemon Info</title>
 <body>
     <div id="showContainer">
 
@@ -23,8 +24,14 @@
             <li>Abilities: <%= pokemonData[pokemonStats].misc.abilities.normal %> </li>
         </ul>
         <form action="/pokedex/<%= pokemonStats %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE">
+            <input type="submit" value="Remove">
         </form>
+            <a href="/">
+                <input type="submit" value="Home">
+            </a>
+            <a href="/<%=pokemonStats%>/edit">
+                <input type="submit" value="Edit Info">
+            </a>
     </div>
 </body>
 </html>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head.ejs') %>
+    <title>Pokedex Home</title>
 <body>
     <div id="container">
+    <h1>Welcome to your Pokedex!</h1>
         <!-- <% for (let i = 0; i < 6; i++ ){%> opening of js squid -->
     <h2> <%= pokemonData[i].name %> </h2>
 
@@ -12,7 +14,7 @@
     </div>
     <nav>
         <a href="/pokedex/new">
-            <input type="submit" value="New Pokemon">
+            <input type="submit" value="Captured New Pokemon">
         </a>
     </nav>
 </body>
