@@ -41,8 +41,11 @@ router.get('/pokedex/new', (req, res) => {
 // Edit route
 //----------------------------------------------
 
-router.get('/pokedex/edit', (req, res) => {
-    res.render('edit.ejs')
+router.get('/:id/edit', (req, res) => {
+    res.render('edit.ejs', {
+        pokemonData: Pokemon[req.params.id],
+        pokemonStats: req.params.id
+    })
 })
 
 
