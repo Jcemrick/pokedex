@@ -3,26 +3,24 @@
     <%- include('./partials/head.ejs') %>
     <title>Update Pokemon</title>
 <body>
-    <div id="background">
-    <div class="container">
     <h1>Update <%= pokemonData.name %> </h1>
-    <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
+    <div>
+    <form id="form2" action="/pokedex/<%=index%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%= pokemonData.name %>"><br>
         Type: <input type="text" name="type" value="<%= pokemonData.type %>"><br>
         Image: <input type="text" name="image" value="<%= pokemonData.img %>"><br>
-        <h3>Stats</h3> 
+        <h3>Stats</h3><br>
         HP: <input type="text" name="stats[hp]" value="<%= pokemonData.stats.hp %>"><br>
         Attack: <input type="text" name="stats[attack]" value="<%= pokemonData.stats.attack %>"><br>
         Defense: <input type="text" name="stats[defense]" value="<%= pokemonData.stats.defense %>"><br>
         Sp Attack: <input type="text" name="stats[spattack]" value="<%= pokemonData.stats.spattack %>"><br>
         Sp Defense: <input type="text" name="stats[spdefense]" value="<%= pokemonData.stats.spdefense %>"><br>
         Speed: <input type="text" name="stats[speed]" value="<%= pokemonData.stats.speed %>"><br>
-        <h3>Abilities</h3> 
+        <h3>Abilities</h3><br>
         Normal: <input type="text" name="misc[abilities][normal]" value="<%= pokemonData.misc.abilities.normal %>"><br>
         Hidden: <input type="text" name="misc[abilities][hidden]" value="<%= pokemonData.misc.abilities.hidden %>"><br>
-        <input type="submit" name="" value="Save Updates">
     </form>
-    </div>
+    <input id="pokebutton" type="submit" name="" value="Save Updates" form="form2">
 </div>
 </body>
 </html>

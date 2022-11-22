@@ -7,8 +7,8 @@
     <div class="showcontainer">
     <img src="<%= pokemonData.img %>" width="50px">
 
-            <h3>Type: <%= pokemonData.type %></h3>
-            <h3>Stats</h3> 
+            <h3>Type:<%= pokemonData.type %></h3>
+            <h3>Stats</h3><br> 
                 <ul style="list-style: none;">
                 <li>HP: <%= pokemonData.stats.hp %></li>
                 <li>Attack: <%= pokemonData.stats.attack %></li>
@@ -17,22 +17,20 @@
                 <li>Sp Defense: <%= pokemonData.stats.spdefense %></li>
                 <li>Speed: <%= pokemonData.stats.speed %></li>
                 </ul>
-            <h3>Abilities</h3> 
+            <h3>Abilities</h3><br> 
             <ul style="list-style: none;">
                 <li>Normal: <%= pokemonData.misc.abilities.normal %> </li>
                 <li>Hidden: <%= pokemonData.misc.abilities.hidden %> </li>
             </ul>
     </div>
-    <div id="lowershow">
-    <form action="/pokedex/<%= pokemonData.id %>?_method=DELETE" method="POST">
-        <input id="pokebutton" type="submit" value="Remove">
+    <form id="form1" action="/pokedex/<%= pokemonData.id %>?_method=DELETE" method="POST">
     </form>
-        <a id="pokebutton" href="/">
-            <input type="submit" value="Home">
+    <a id="pokebutton" href="/">
+        <input type="submit" value="Home">
         </a><br>
         <a id="pokebutton" href="/pokedex/<%=index%>/edit">
             <input type="submit" value="Edit Info">
         </a><br>
-    </div>
+        <button id="pokebutton" type="submit" form="form1">Remove</button><br>
 </body>
 </html>

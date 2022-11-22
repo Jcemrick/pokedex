@@ -1,7 +1,22 @@
 
+
 h1 {
     text-align: center;
-    padding: 0 0 100px 0
+    padding: 0 0 4rem 0
+}
+
+h3 {
+    display: inline-block;
+    margin: 2rem 4rem 0 4rem;
+}
+
+a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    color: black;
 }
 
 .container {
@@ -15,7 +30,6 @@ h1 {
     column-gap: 100px;
     row-gap: 75px;
     max-width: 70rem;
-    
 }
 
 .showcontainer {
@@ -31,27 +45,19 @@ h1 {
     width: 150px;
 }
 
-a {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-}
-
-#lowerdiv {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    margin: 20px auto 0 auto;
-    width: 25%
-}
-
 #pokebutton {
-    margin: 20px auto 0 auto;
-    width: 25%
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 25%;
+}
+
+#form2 {
+    margin: 0 0 2rem 0;  
+}
+
+#form2 {
+    margin: 0 0 2rem 0;
 }
 
 
