@@ -3,8 +3,8 @@
     <%- include('./partials/head.ejs')%>
     <title>New Pokemon Entry</title>
 <body>
-    <div class="newContainer">
-
+    <div class="background">
+        <div class="container">
     <h1>Captured!</h1>
 
     <form action="/pokedex" method="POST">
@@ -23,6 +23,7 @@
         Abilities: <input type="text" name="abilities" placeholder="Abilities"><br>
         <input type="submit" value="Add Pokemon">
     </form>
+        </div>
     </div>
 </body>
 </html>

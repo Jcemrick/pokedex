@@ -3,6 +3,7 @@
     <%- include('./partials/head.ejs') %>
     <title>Update Pokemon</title>
 <body>
+    <div id="background">
     <div class="container">
     <h1>Update <%= pokemonData.name %> </h1>
     <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
@@ -22,5 +23,6 @@
         <input type="submit" name="" value="Save Updates">
     </form>
     </div>
+</div>
 </body>
 </html>

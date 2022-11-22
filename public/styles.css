@@ -1,3 +1,84 @@
+
 h1 {
-    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 0 0 100px 0
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 20rem;
+    overflow-y: auto;
+    column-gap: 100px;
+    row-gap: 75px;
+    max-width: 70rem;
+    
+}
+
+.showcontainer {
+    margin: auto;
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.showcontainer img {
+    width: 150px;
+}
+
+a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+#lowerdiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 25%
+}
+
+#pokebutton {
+    margin: 20px auto 0 auto;
+    width: 25%
+}
+
+
+@media screen and (max-width: 500px) {
+    html {
+        height: 100%;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 100%;
+        text-align: center;
+    }
+
+    h1 {
+    text-align: center;
+    padding: 80px 0 0 0;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #pokebutton {
+        margin: auto;
+        width: 50%;
+    }
 }

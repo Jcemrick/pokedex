@@ -3,19 +3,18 @@
     <%- include("./partials/head.ejs") %>
     <title>Pokedex Home</title>
 <body>
-    <div class="container">
     <h1>Welcome to your Pokedex!</h1>
-        <!-- <% for (let i = 0; i < 6; i++ ){%> opening of js squid -->
-    <h2> <%= pokemonData[i].name %> </h2>
-
+    <div class="container">
+        <!-- <% for (let i = 0; i < pokemonData.length; i++ ){%> opening of js squid --
                 <!-- iterating through the pokemon data -->
-        <a href="/pokedex/<%= i %>"><img src="<%= pokemonData[i].img%> " width="50px"></a>  
+        <a href="/pokedex/<%= i %>"><img src="<%= pokemonData[i].img%> " width="100px"><%= pokemonData[i].name %></a>  
+        
         <!-- <% } %> closing of js squid -->
+    </div>
     <nav>
-        <a href="/pokedex/new">
+        <a id="pokebutton" href="/pokedex/new">
             <input type="submit" value="Captured New Pokemon">
         </a>
     </nav>
-    </div>
 </body>
 </html>
