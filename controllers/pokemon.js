@@ -3,7 +3,7 @@
 //----------------------------------------------
 
 const express = require('express');
-const Pokemon = require('../models/pokemon');
+let Pokemon = require('../models/pokemon');
 
 
 //----------------------------------------------
@@ -23,7 +23,7 @@ router.get('/', (req, res) => {res.redirect('/pokedex')});
 
 router.get('/pokedex', (req, res) => {
     res.render('index.ejs', {
-        pokemonData: Pokemon,
+        pokemonData: Pokemon
     })
 })
 
@@ -41,10 +41,10 @@ router.get('/pokedex/new', (req, res) => {
 // Edit route
 //----------------------------------------------
 
-router.get('/:id/edit', (req, res) => {
+router.get('/pokedex/:id/edit', (req, res) => {
     res.render('edit.ejs', {
         pokemonData: Pokemon[req.params.id],
-        pokemonStats: req.params.id
+        index: req.params.id
     })
 })
 
@@ -65,8 +65,8 @@ router.post('/pokedex', (req, res) => {
 
 router.get('/pokedex/:id', (req, res) => {
     res.render('show.ejs', {
-        pokemonData: Pokemon,
-        pokemonStats: req.params.id
+        pokemonData: Pokemon[req.params.id],
+        index: req.params.id
     })
 })
 
@@ -75,7 +75,8 @@ router.get('/pokedex/:id', (req, res) => {
 //----------------------------------------------
 
 router.put('/pokedex/:id', (req, res) => {
-    Pokemon[req.params.id] = req.body
+    console.log(req.body)
+    Pokemon[req.params.id] = {...Pokemon[req.params.id],...req.body}
     res.redirect('/pokedex')
 })
 
@@ -83,7 +84,7 @@ router.put('/pokedex/:id', (req, res) => {
 // Delete route
 //----------------------------------------------
 router.delete('/pokedex/:id', (req, res) => {
-    Pokemon.splice(req.params.id, 1)
+    Pokemon = Pokemon.filter( pokemon => pokemon.id !== req.params.id)
     res.redirect('/pokedex')
 })
 
