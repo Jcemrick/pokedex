@@ -3,7 +3,7 @@
     <%- include('./partials/head.ejs')%>
     <title>New Pokemon Entry</title>
 <body>
-    <div id="newContainer">
+    <div class="newContainer">
 
     <h1>Captured!</h1>
 
@@ -14,14 +14,15 @@
 
     <form action="/pokedex" method="POST">
         <span>Stats</span><br> 
-            HP: <input type="text" name="hp" placeholder="HP"><br> 
-            Attack: <input type="text" name="attack" placeholder="Attack"><br> 
-            Defense: <input type="text" name="defense" placeholder="Defense"><br> 
-            Sp Attack: <input type="text" name="spattack" placeholder="Sp Attack"><br> 
-            Sp Defense: <input type="text" name="spdefense" placeholder="Sp Defense"><br> 
-            Speed: <input type="text" name="speed" placeholder="Speed"><br>
+            HP: <input type="text" name="stats[hp]" placeholder="HP"><br> 
+            Attack: <input type="text" name="stats[attack]" placeholder="Attack"><br> 
+            Defense: <input type="text" name="stats[defense]" placeholder="Defense"><br> 
+            Sp Attack: <input type="text" name="stats[spattack]" placeholder="Sp Attack"><br> 
+            Sp Defense: <input type="text" name="stats[spdefense]" placeholder="Sp Defense"><br> 
+            Speed: <input type="text" name="stats[speed]" placeholder="Speed"><br>
         Abilities: <input type="text" name="abilities" placeholder="Abilities"><br>
         <input type="submit" value="Add Pokemon">
     </form>
+    </div>
 </body>
 </html>

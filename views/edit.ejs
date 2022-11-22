@@ -3,6 +3,7 @@
     <%- include('./partials/head.ejs') %>
     <title>Update Pokemon</title>
 <body>
+    <div class="container">
     <h1>Update <%= pokemonData.name %> </h1>
     <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%= pokemonData.name %>"><br>
@@ -15,8 +16,11 @@
         Sp Attack: <input type="text" name="stats[spattack]" value="<%= pokemonData.stats.spattack %>"><br>
         Sp Defense: <input type="text" name="stats[spdefense]" value="<%= pokemonData.stats.spdefense %>"><br>
         Speed: <input type="text" name="stats[speed]" value="<%= pokemonData.stats.speed %>"><br>
+        <h3>Abilities</h3> 
+        Normal: <input type="text" name="misc[abilities][normal]" value="<%= pokemonData.misc.abilities.normal %>"><br>
+        Hidden: <input type="text" name="misc[abilities][hidden]" value="<%= pokemonData.misc.abilities.hidden %>"><br>
         <input type="submit" name="" value="Save Updates">
     </form>
-
+    </div>
 </body>
 </html>
