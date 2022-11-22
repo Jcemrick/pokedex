@@ -5,33 +5,35 @@
 <body>
     <div id="showContainer">
 
-    <h1> <%= pokemonData[pokemonStats].name %> </h1>
+    <h1> <%= pokemonData.name %> </h1>
 
-    <img src="<%= pokemonData[pokemonStats].img %>" width="50px">
+    <img src="<%= pokemonData.img %>" width="50px">
 
-        <ul style="list-style: none;">
-            <li>Type: <%= pokemonData[pokemonStats].type[0] %></li>
-            <li>Stats 
+            <h3>Type: <%= pokemonData.type %></h3>
+            <h3>Stats</h3> 
                 <ul style="list-style: none;">
-                <li>HP: <%= pokemonData[pokemonStats].stats.hp %></li>
-                <li>Attack: <%= pokemonData[pokemonStats].stats.attack %></li>
-                <li>Defense: <%= pokemonData[pokemonStats].stats.defense %></li>
-                <li>Sp Attack: <%= pokemonData[pokemonStats].stats.spattack %></li>
-                <li>Sp Defense: <%= pokemonData[pokemonStats].stats.spdefense %></li>
-                <li>Speed: <%= pokemonData[pokemonStats].stats.speed %></li>
+                <li>HP: <%= pokemonData.stats.hp %></li>
+                <li>Attack: <%= pokemonData.stats.attack %></li>
+                <li>Defense: <%= pokemonData.stats.defense %></li>
+                <li>Sp Attack: <%= pokemonData.stats.spattack %></li>
+                <li>Sp Defense: <%= pokemonData.stats.spdefense %></li>
+                <li>Speed: <%= pokemonData.stats.speed %></li>
                 </ul>
-            </li>
-            <li>Abilities: <%= pokemonData[pokemonStats].misc.abilities.normal %> </li>
-        </ul>
-        <form action="/pokedex/<%= pokemonStats %>?_method=DELETE" method="POST">
+            <h3>Abilities</h3> 
+            <ul style="list-style: none;">
+                <li>Normal: <%= pokemonData.misc.abilities.normal %> </li>
+                <li>Hidden: <%= pokemonData.misc.abilities.hidden %> </li>
+            </ul>
+        <form action="/pokedex/<%= pokemonData.id %>?_method=DELETE" method="POST">
             <input type="submit" value="Remove">
         </form>
             <a href="/">
                 <input type="submit" value="Home">
-            </a>
-            <a href="/<%=pokemonStats%>/edit">
+            </a><br>
+
+            <a href="/pokedex/<%=index%>/edit">
                 <input type="submit" value="Edit Info">
-            </a>
+            </a><br>
     </div>
 </body>
 </html>

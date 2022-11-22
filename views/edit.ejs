@@ -4,5 +4,19 @@
     <title>Update Pokemon</title>
 <body>
     <h1>Update <%= pokemonData.name %> </h1>
+    <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%= pokemonData.name %>"><br>
+        Type: <input type="text" name="type" value="<%= pokemonData.type %>"><br>
+        Image: <input type="text" name="image" value="<%= pokemonData.img %>"><br>
+        <h3>Stats</h3> 
+        HP: <input type="text" name="stats[hp]" value="<%= pokemonData.stats.hp %>"><br>
+        Attack: <input type="text" name="stats[attack]" value="<%= pokemonData.stats.attack %>"><br>
+        Defense: <input type="text" name="stats[defense]" value="<%= pokemonData.stats.defense %>"><br>
+        Sp Attack: <input type="text" name="stats[spattack]" value="<%= pokemonData.stats.spattack %>"><br>
+        Sp Defense: <input type="text" name="stats[spdefense]" value="<%= pokemonData.stats.spdefense %>"><br>
+        Speed: <input type="text" name="stats[speed]" value="<%= pokemonData.stats.speed %>"><br>
+        <input type="submit" name="" value="Save Updates">
+    </form>
+
 </body>
 </html>
